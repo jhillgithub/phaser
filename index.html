@@ -49,7 +49,7 @@ function preload ()
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
-    this.load.spritesheet('dude', 'assets/batman.png', { frameWidth: 40, frameHeight: 60 });
+    this.load.spritesheet('dude', 'assets/player.png', { frameWidth: 24, frameHeight: 48 });
 }
 
 function create ()
@@ -79,8 +79,8 @@ function create ()
     //  Our player animations, turning, walking left and walking right.
     this.anims.create({
         key: 'left',
-        frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 0 }),
-        frameRate: 10,
+        frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 1 }),
+        frameRate: 8,
         repeat: -1
     });
 
@@ -92,8 +92,8 @@ function create ()
 
     this.anims.create({
         key: 'right',
-        frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 0 }),
-        frameRate: 10,
+        frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 1 }),
+        frameRate: 8,
         repeat: -1
     });
 
